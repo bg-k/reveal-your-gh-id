@@ -3,7 +3,10 @@ import React, {useState} from "react";
 const Presenter = (props) => {
 
   return(
-    <h2>Your GitHub id is: {props.id}</h2>
+    <div className="aaa">
+      <h2>Your GitHub id</h2>
+      <h2>{props.id}</h2>
+    </div>
   );
 }
 
