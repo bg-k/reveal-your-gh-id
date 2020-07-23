@@ -1,11 +1,15 @@
 import React, {useState} from "react";
+import NotFound from "./NotFound";
 
-const Presenter = (props) => {
-
+const Presenter = ({id}) => {
   return(
     <div className="aaa">
-      <h2>Your GitHub id</h2>
-      <h2>{props.id}</h2>
+      {id &&  
+        <div>
+          <h2>Your GitHub id</h2>
+          <h2>{id}</h2>
+        </div>
+      }
     </div>
   );
 }
