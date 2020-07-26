@@ -1,0 +1,37 @@
+.container {
+  margin: 200px auto 0;
+  width: 645px;
+}
+
+.header {
+  font-size: 64px;
+}
+
+/* Finder.js */
+
+.finder-container {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.finder-input {
+  width: 85%;
+  font-size: 25px;
+}
+
+.find-button {
+  width: 15%;
+  font-size: 25px;
+}
+
+.finder-fetch-result {
+  margin-top: 50px;
+}
+
+/* Presenter.js */
+
+.presenter-container {
+  text-align: center;
+  font-size: 40px;
+}

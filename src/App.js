@@ -1,11 +1,12 @@
 import React from "react";
-import "./App.css";
-import Main from "./components/Main"
+import "./style.css";
+import Finder from "./components/Finder"
 
 function App() {
   return (
-    <div className="App">
-      <Main />
+    <div className="container">
+      <h1 className="header">Reveal your GitHub ID</h1>
+      <Finder />
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "../style.css"
 import findId from "../api";
 import Presenter from "./Presenter";
 import NotFound from "./NotFound";
@@ -18,14 +19,21 @@ const Finder = () => {
 
   return(
     <div>
-      <input type="text" 
-             name="username"
-             placeholder="Enter your GitHub user name"
-             onChange={e => setUsername(e.target.value)} />
-      <button onClick={() => fetchId()}>Find</button>
+      <div className="finder-container">
+        <input type="text" 
+              name="username"
+              placeholder="Enter your GitHub user name"
+              className="finder-input"
+              onChange={e => setUsername(e.target.value)} />
+        
+        <button onClick={() => fetchId()}
+                className="find-button">Find</button>
+      </div>
 
-      {(!isInitialState && !id) && <NotFound />}
-      {(id) && <Presenter id={id} />}
+      <div className="finder-fetch-result">
+        {(!isInitialState && !id) && <NotFound />}
+        {(id) && <Presenter id={id} />}
+      </div>
     </div>
   )
 }
