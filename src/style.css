@@ -1,6 +1,7 @@
 .container {
   margin: 200px auto 0;
   width: 645px;
+  text-align: center;
 }
 
 .header {

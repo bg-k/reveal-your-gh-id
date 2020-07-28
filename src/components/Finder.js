@@ -3,6 +3,7 @@ import "../style.css"
 import findId from "../api";
 import Presenter from "./Presenter";
 import NotFound from "./NotFound";
+import ApiNavigator from "./ApiNavigator";
 
 const Finder = () => {
   const [username, setUsername] = useState("");
@@ -32,7 +33,12 @@ const Finder = () => {
 
       <div className="finder-fetch-result">
         {(!isInitialState && !id) && <NotFound />}
-        {(id) && <Presenter id={id} />}
+        {(id) && 
+          <div>
+            <Presenter id={id} />
+            <ApiNavigator />
+          </div>
+        }
       </div>
     </div>
   )
