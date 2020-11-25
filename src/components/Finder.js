@@ -18,6 +18,11 @@ const Finder = () => {
     .finally(() => setIsInitialState(false));
   }
 
+  const handleEnter = e => {
+    if (e.key === "Enter")
+      fetchId();
+  }
+
   return(
     <div>
       <div className="finder-container">
@@ -25,9 +30,11 @@ const Finder = () => {
               name="username"
               placeholder="Enter your GitHub user name"
               className="finder-input"
-              onChange={e => setUsername(e.target.value)} />
+              onChange={e => setUsername(e.target.value)}
+              onKeyPress={handleEnter}
+              />
         
-        <button onClick={() => fetchId()}
+        <button onClick={fetchId}
                 className="find-button">Find</button>
       </div>
 
